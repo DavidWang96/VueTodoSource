@@ -1,0 +1,106 @@
+.main-form {
+  .form-control {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      display:block;
+      width: 50%;
+    }
+
+    input {
+      width: 50%;
+      border: 2px solid $violet;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    &.is-error {
+      input {
+        border: 2px solid $red;
+      }
+    }
+  }
+
+  .form-todo {
+    margin-top: 20px;
+
+    .todo-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      &__name {
+        width: calc(100% - 80px);
+
+        input {
+          border: 0;
+          border-bottom: 2px solid $violet;
+          width: 100%;
+          padding: 7px;
+        }
+
+        &.is-error {
+          input {
+            border-bottom: 2px solid $red;
+          }
+        }
+      }
+
+      &__remove {
+        width: 35px;
+        color: $violet;
+        padding:15px;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          position: absolute;
+          width: 10px;
+          height: 2px;
+          background-color: $violet;
+          top: calc(50% + 1px);
+          left: calc(50% - 3px);
+        }
+
+        &:before{
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          border: 2px solid $violet;
+          border-radius: 100%;
+          position:absolute;
+          top: 6px;
+          left: 8px;
+        }
+      }
+
+      &.completed {
+        .todo-item__name {
+          input {
+            color: darkgrey;
+            text-decoration: line-through;
+          }
+
+        }
+      }
+    }
+  }
+
+  &__title{
+    margin: 20px 0 15px 0;
+  }
+}
+
+.form-errors {
+  color: $red;
+  margin-top: 30px;
+  font-size: 14px;
+
+  ul {
+    padding-left: 15px;
+    list-style: circle;
+    margin-left: 5px;
+  }
+}

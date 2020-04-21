@@ -1,0 +1,17 @@
+// Переменные
+@import "abstract/variables";
+
+// Анимации
+@import "abstract/animations";
+
+// Стили по умолчанию
+@import "partials/defaults";
+
+// Стили отдельных элементов
+@import "partials/modules";
+@import "partials/form";
+@import "partials/modal";
+@import "partials/notes";
+
+// Стили для страниц
+@import "pages/edit_note";

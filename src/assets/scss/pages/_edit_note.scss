@@ -1,0 +1,35 @@
+.edit-note-page {
+  .page-form {
+    max-width: 780px;
+    margin: 120px auto 0;
+    padding: 30px 15px 20px;
+    background-color: #fff;
+    box-shadow: $soft-shadow;
+
+    &__buttons {
+      margin-top: 50px;
+
+      .row {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .edit-note-page {
+    .page-form {
+      &__buttons {
+        .row {
+          a{
+            font-weight: bold;
+            font-size: 30px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

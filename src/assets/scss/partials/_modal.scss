@@ -1,0 +1,59 @@
+.modal-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.modal {
+  padding: 0 15px;
+  position: fixed;
+  z-index: 15;
+  max-width: 500px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+
+  &__content {
+    background-color: #fff;
+  }
+
+  &__header{
+    background-color: $violet;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__body{
+    padding: 15px;
+  }
+
+  &__footer{
+    padding: 15px;
+    border-top: 1px dashed $violet;
+    text-align: center;
+
+    button {
+      margin: 5px 15px;
+    }
+  }
+
+  &_large{
+    max-width: 700px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .modal {
+    top: 10%;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+}
